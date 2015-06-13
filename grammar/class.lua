@@ -42,6 +42,7 @@
 --
 ------------------------------------------
 --==============END=======================
+local TrackClassInstances = false
 function Class(base, _ctor)
     local c = {}    -- a new class instance
     if not _ctor and type(base) == 'function' then
