@@ -1,3 +1,6 @@
+-- 打印table
+
+-- 打印一层
 local function print_table(t,fn)
   local fn =fn or print
   if type(t) =="table" then 
@@ -9,6 +12,7 @@ local function print_table(t,fn)
   end
 end
 
+--迭代打印所有层次的table
 ptt=function (t,fn,k)
   local k=k or ""
   local fn =fn or print
@@ -23,5 +27,6 @@ ptt=function (t,fn,k)
   end
   
 
+--缩写
 pt=print_table
     
