@@ -9,7 +9,11 @@
 -- def L{ (id1<->id2,type,power, {other(...)}) }
 
 package.path=package.path..";..\\?.lua;"
+<<<<<<< HEAD
 require "grammar.class"
+=======
+require "luagy.grammar.class"
+>>>>>>> 9740ece6e2dd0f39d899ce9c2d3816298c36a1c9
 
 local Graph=Class(function (self,...)
 
@@ -108,10 +112,13 @@ end
 
 end
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 9740ece6e2dd0f39d899ce9c2d3816298c36a1c9
 --[[
 print("test")
 G=Graph()
