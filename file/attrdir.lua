@@ -1,34 +1,28 @@
+
+require"lfs"
+local tmp = "/tmp"
+--A function to iterine all file in a directory.
 require"lfs"
 
-local tmp = "/tmp"
-local sep = "\\"
+local sep = "/"
 local upper = ".."
---print (lfs._VERSION)
 
---function callback(dir,filename,suff,type)
---type:0 file,1 dir
-function attrdir (path,callback)
+function attrdir (path,fn)
+  -- function fn(filename,filepath)
 	for file in lfs.dir(path) do
 		if file ~= "." and file ~= ".." then
-			local s=string.gfind(file,"%.(%w+)")
-
-			if s then s=s() end
-
-			local f = path..sep..file
-
-			local attr = lfs.attributes (f)
+			local p = path..sep..file
+			local attr = lfs.attributes (p)
 			assert (type(attr) == "table")
 			if attr.mode == "directory" then
-
-					callback(f,file,s,1)
-					attrdir(f,print)
-			else
-					callback(f,file,s,0)
+				attrdir (p,fn)
+			else --is file
+        fn(file,p)
 			end
 		end
 	end
 end
 
---test
---attrdir("..",print)
+
+return  attrdir
 
