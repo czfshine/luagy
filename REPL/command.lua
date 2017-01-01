@@ -13,6 +13,33 @@ function Command:doit()
     return false,"command \""..cmd.."\" can't find"
   end
 end
+--[[
+
+the commands like:
+  commands -abc -p 1 -l 5 9 -o test.out --notprint --dir=./src/ filename1 filename2 
+  
+  cmdname          shortop                    long op                other arg
+                      |                          |                        |
+        -------------------------     ------------------------   -----------------------
+        /             |         \       /                \       
+       /              |          \     /                  \
+without arg         a arg   some arg  without          a pram
+
+then the arg table like this:
+  t={"commands","-abc","-p","1","-l","5","9","-o","test.out","--notprint","--dir=./src/","filename","filename",
+      a=true,b=true,c=true,
+      p={"1"},
+      l={"5","9"},
+      o={"test.out"}
+      notprint=true,
+      dir="./src/",
+      other={
+        "filename1",
+        "filename2"
+      }
+    }
+        
+]]
 
 function Command:gettable()
   self.t={}
@@ -35,7 +62,7 @@ function Command:gettable()
               t.short[s]={} 
               while i<argn and t[i+1]:sub(1,1)~="-" do 
                 table.insert(t.short[s],t[i+1])
-                i=i+2
+                i=i+1
                 print(i)
               end
             end)
