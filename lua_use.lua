@@ -49,7 +49,7 @@ map={}
 
 map["abc"]=1 --给元素赋值
 map["bcd"]=2 
---相当于c++中的map<string,int>
+--相当于c++中的`map<string,int>`
 
 --然后取值可以这样
 print(map["abc"]) --> 1
@@ -160,7 +160,7 @@ end            -- }
 if(i<1) then   
   print("yes") 
 elseif i==1 then --括号可以不用，是elseif不是else if(后者是两个if语句所以要两个end，前者只要一个)     
-  print("no") 
+  print("no")
 else
   print("wtf?")
 end  
@@ -257,8 +257,8 @@ end
 print(max(5,2,8,5,4,5,9,5))
 
 --与其他参数混用
-function printf(f,...)
-  print(string.format(f,...)) --别管它是怎么实现的 =_=
+function printf(f , ...)
+  print(string.format(f , ...)) --别管它是怎么实现的 =_=
 end
 
 printf("I am %s ,I am %d year old.","czfshine",18)
@@ -268,3 +268,8 @@ printf("I am %s ,I am %d year old.","czfshine",18)
 --`end`
 
 --TODO:
+--短路法则 指令
+--
+--len
+--
+--property tables
