@@ -1,0 +1,21 @@
+language: java
+
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+
+install: mvn -f learn install -DskipTests=true
+script: mvn -f learn test
+
+branches:
+  except:
+    - gh-pages
+
+notifications:
+  email: false
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.m2
