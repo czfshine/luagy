@@ -1,0 +1,18 @@
+[submodule "luaunit"]
+	path = luaunit
+	url = https://github.com/bluebird75/luaunit.git
+[submodule "Penlight"]
+	path = Penlight
+	url = https://github.com/stevedonovan/Penlight.git
+[submodule "lua-stdlib"]
+	path = lua-stdlib
+	url = https://github.com/lua-stdlib/lua-stdlib.git
+[submodule "Moses"]
+	path = Moses
+	url = https://github.com/Yonaba/Moses.git
+[submodule "xlua"]
+	path = xlua
+	url = https://github.com/torch/xlua.git
+[submodule "Lust"]
+	path = Lust
+	url = https://github.com/weshoke/Lust.git
