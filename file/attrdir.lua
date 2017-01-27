@@ -14,7 +14,7 @@ function attrdir (path,fn)
 			if attr.mode == "directory" then
 				attrdir (p,fn)
 			else --is file
-        fn(file,p)
+        fn(p,p)
 			end
 		end
 	end
