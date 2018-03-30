@@ -8,7 +8,7 @@ Command=Class(function (self,commandstr,config)
 function Command:doit()
   local cmd=self.t[1]
   if(self.config[cmd]) then
-    return true,self.config[cmd](self.t)
+    return true,self.config[cmd].fn(self.t)
   else
     return false,"command \""..cmd.."\" can't find"
   end

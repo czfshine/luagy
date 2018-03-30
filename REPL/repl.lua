@@ -16,11 +16,11 @@ config={
     }
   }
 }
-REPL=Class(function (self)
+REPL=Class(function (self,config)
     self.input=Input()
     self.pt= Prompt()
     
-    self.config={}
+    self.config=config or {}
   end)
 
 function REPL:listen()
