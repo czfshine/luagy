@@ -4,18 +4,6 @@ Input=require "repl.input"
 Prompt=require "repl.prompt"
 Command=require "repl.command"
 
-config={
-  test={
-    long={"*print","+dev","?none"},
-    short={
-      p={"pages"},
-      r={}
-    },
-    other={
-      "filename..."
-    }
-  }
-}
 REPL=Class(function (self,config)
     self.input=Input()
     self.pt= Prompt()

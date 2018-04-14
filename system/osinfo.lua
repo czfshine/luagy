@@ -12,7 +12,7 @@
 --~end
 
 
-os.iswindows = os.getenv('WINDIR') or (os.getenv('OS') or ''):match('[Ww]indows')
+os.iswindow = os.getenv('WINDIR') or (os.getenv('OS') or ''):match('[Ww]indows')
 
 os.islinux = not os.iswindows and not os.getenv('DYLD_LIBRARY_PATH') and io.open("/proc")
 os.arch = "x86" -- use 32bit by default
