@@ -2,7 +2,6 @@
 local require=require;
 local loadfile=loadfile;
 local print=print;
-module( "importall");
 
 local attrdir=require "file.attrdir"
 function isLUA(path)
