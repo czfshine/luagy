@@ -17,5 +17,7 @@
 	path = Lust
 	url = https://github.com/weshoke/Lust.git
 [submodule "ldoc"]
+	
 	path = ldoc
+	
 	url = https://github.com/stevedonovan/LDoc.git
